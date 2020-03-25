@@ -1,4 +1,4 @@
- 
+package Stack;
 
 class StackImplementation{
 	public static void main(String[] args) {

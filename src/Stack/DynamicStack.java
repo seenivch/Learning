@@ -1,3 +1,5 @@
+package Stack;
+
 class DynamicStack {
 	
 	int capacity = 2;

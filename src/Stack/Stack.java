@@ -1,3 +1,5 @@
+package Stack;
+
 class Stack {
 	
 	int stack[] = new int [5];
