@@ -1,0 +1,348 @@
+Stack
+Queue
+Linked list
+Tree Implement
+
+Best sorting
+
+Search
+Binary
+In order preorder post
+Stack application
+
+Expression evaluation
+
+Tree types
+Avlo tree,red black tree
+Bree impl in YouTube
+
+
+Java
+Thread
+Concurrency
+String
+Collections
+Stream
+Java 8 features
+
+6Prgm array string related
+
+Spring boot annotations
+Spring And spring boot diff
+Spring containers
+Db connectivity
+SQL
+Db index , partition
+Deadlock
+
+
+============================================================================================================================
+
+Data Structures:
+
+Data structure is a  specialized format for organizing,processing,storing,retriving the data in memory location.
+Data structure is designed to arrange data to suit a specific purpose so that it can be  accessed and worked with in appropriate ways.
+
+Types: 
+
+->Linear data structure  - Array,Stack,Queue,Linked List
+->Non Linear data structure - Graph, Tree
+
+
+abstract data type:
+
+It specifies what operations to be performed and not how it will be implemented.
+It doesn't specify how data will be organized in memory and what algorithms are used for implementation.
+
+
+Stack:
+
+Stack is a container of object that are inserted and removed using LIFO principle.
+A stack is a limited access data structure - elements can be added and removed from the stack only at the top
+Stackis a linear data structure, its implementing LIFO.
+It is having abstract data type.
+
+Main Operations:
+push() − Pushing (storing) an element on the stack.
+pop() − Removing (accessing) an element from the stack.
+peek() − get the top data element of the stack, without removing it.
+isFull() − check if stack is full.
+isEmpty() − check if stack is empty.
+
+peer()
+
+Algorithm:
+
+begin procedure peer
+ 	return stack[top]
+end procedure
+
+Example
+peek():
+
+int peek(){
+	return stack[top]
+}
+
+isfull():
+
+bool isfull() {
+   if(top == MAXSIZE)
+      return true;
+   else
+      return false;
+}
+
+isEmpty():
+
+bool isEmpty(){
+	if(top == -1){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+push():
+
+void push(int data){
+	
+	if(!isFull()){
+		top = top+1;
+		stack[top]=data;
+	} else {
+		system.out.println("Stack is not empty");
+	}
+}
+
+pop():
+
+int pop(int data){
+	
+	if(!isEmpty()){
+		data = stack[top];
+		top = top-1;
+		return data;
+	} else {
+		system.out.println("Stack is empty");
+	}
+}
+
+================================================================================================================
+Queue:
+
+ Queue is a linear data structure where the first element is inserted from one end called REAR and deleted from the other end called as FRONT. ... In a queue, one end is always used to insert data (enqueue) and the other is used to delete data (dequeue), because queue is open at both its ends.
+
+ Operations:
+enqueue() − add (store) an item to the queue.
+dequeue() − remove (access) an item from the queue.
+
+enqueue:
+
+
+int enqueue(int data)      
+   if(isfull())
+      return 0;
+   
+   rear = rear + 1;
+   queue[rear] = data;
+   
+   return 1;
+end procedure
+
+dequeue:
+
+int dequeue() {
+   if(isempty())
+      return 0;
+
+   int data = queue[front];
+   front = front + 1;
+
+   return data;
+}
+
+=============================================================================================================
+
+Linked list
+
+Linked list is a sequence of data structures, which is connected via links.
+
+Linked list is aa sequence of links which contains items, Each link contains a connection with another link.
+
+Link − Each link of a linked list can store a data called an element
+Next − Each link of a linked list contains a link to the next link called Next.
+
+
+Types of Linked List
+Following are the various types of linked list.
+
+Simple Linked List − Item navigation is forward only.
+
+Doubly Linked List − Items can be navigated forward and backward.
+
+Circular Linked List − Last item contains link of the first element as next and the first element has a link to the last element as previous.
+
+Array:
+can fetch the value randomly.
+not expandable
+
+LinkedList:
+Slower than array.
+
+===============================================================================================================
+
+
+Tree:
+
+Tree represents the nodes connected by edges.
+
+Types:
+
+Binary Tree:
+Each node shoule have 0,1,2 children.
+ 
+ -> Strict Binary tree:
+ 		Each node should have 2 children.
+ -> Full Binary tree:
+ 		Leaf nodes should maintain same level.
+ -> Complete binary tree:
+ 		Tree should having the level
+
+ Height - Maximum length of the tree.
+ Depth - Total steps from root node
+
+ ==========================================================================================================
+
+ Sorting:
+Types of sorting:
+1. Bubble sort
+2. Insertion sort
+3. Selection sort
+4. Heap sort
+5. Quick Sort
+6. Merge sort
+7. Shell Sort
+8. Counting Sort
+9. Bucket Sort
+10. Radix sort
+
+ Bubble sort:
+
+ Bubble sort is the simplest sorting algorithm,that works by repeatedly swapping the adjacent elements if they are in wrong order.
+ -> Take first two value(adjecent element)
+ ->Compare
+ ->Swap
+
+ Insertion Sort:
+
+ Insert a new element each time into the array
+ If sorting is affected , then resort it.
+
+
+ Selection Sort:
+
+ swap the assume minimum and real minimum
+
+
+ 9,8,7,5,6       9 - Assume minimum, 5 - Real Minimum
+
+
+ ================================================================================================
+
+Heap sort:
+
+Heap is a special case of balanced binary tree data structure where the root-node key is compared with its children and arranged accordingly. If α has child node β then −
+
+key(α) ≥ key(β)
+
+Max Heap: - Ascending order
+Parent node should greter than child node.
+delete and replace the root node with the last child node.
+deleted node will be placed at last position
+
+Min Heap: - Descending Order
+Parent node should lesser than child node.
+delete and replace the root node with the last child node
+deleted node will be placed at last position
+
+================================================================================================
+
+Quick Sort: 
+
+Divide and conquer algorithm.
+Choose the pivot element.
+
+Left side values of the pivot element should have lesser than pivot.
+
+Right side values of the pivot element should have greater than pivot.
+
+Swap elements as per the conditions
+
+Pivot element should be,
+-> First Element
+-> Middle Element
+-> Last Element
+
+=================================================================================================
+
+Merge Sort:
+Merge sort is most preferred one.
+
+Most of the E-commerce websites are using this sorting algorithm.
+
+It uses two operations two sort the data,
+-> Split
+->Combiation
+
+===================================================================================================
+Shell Sort:
+
+Split elements by Gap.
+swap it.
+
+gap = TotalElements/2 
+=================================================================================================
+
+Counting Sort:
+Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
+
+Let us understand it with the help of an example.
+
+For simplicity, consider the data in the range 0 to 9. 
+Input data: 1, 4, 1, 2, 7, 5, 2
+  1) Take a count array to store the count of each unique object.
+  Index:     0  1  2  3  4  5  6  7  8  9
+  Count:     0  2  2  0   1  1  0  1  0  0
+
+  2) Modify the count array such that each element at each index 
+  stores the sum of previous counts. 
+  Index:     0  1  2  3  4  5  6  7  8  9
+  Count:     0  2  4  4  5  6  6  7  7  7
+
+The modified count array indicates the position of each object in 
+the output sequence.
+ 
+  3) Output each object from the input sequence followed by 
+  decreasing its count by 1.
+  Process the input data: 1, 4, 1, 2, 7, 5, 2. Position of 1 is 2.
+  Put data 1 at index 2 in output. Decrease count by 1 to place 
+  next data 1 at an index 1 smaller than this index.
+
+  ======================================================================================================
+
+
+  Bucket Sort:
+
+  Add all the elements to bucket
+  Sort in bucket
+  Add it to list.
+
+  Note:
+  Bucket should have maximum value of array.
+
+  ===================================================================================================
+
+  Radix sort:
+  Sort by 1's.10's and 100's
